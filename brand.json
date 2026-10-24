@@ -1,0 +1,69 @@
+{
+  "name": "Chizpita",
+  "legal_entity": "Cheesy Pockets LLC",
+  "version": "3.0.0",
+  "spelling": "CHIZPITA in logos, Chizpita in running text: one word, always with a C.",
+  "trademark": "Use ™ (never ®). Every lockup with the wordmark already carries a small ™ top-right; the mark, icons, favicons and mascot art do not. In text, write Chizpita™ on the first or most prominent mention of a page, post, flyer or package, then plain Chizpita.",
+  "mascot_name": "Chizpita (the mascot carries the brand name)",
+  "taglines": ["Love at first bite", "Handmade with love", "Handmade in San Diego"],
+  "tagline_language": "English only",
+  "flavors": ["Kalamata Olive", "Zatar", "Pizza", "Chipotle", "El Clásico", "Chilaquil Verde"],
+  "flavor_notes": "El Clásico is the plain cheese flavor; same name in every language.",
+  "base_urls": {
+    "raw": "https://raw.githubusercontent.com/chizpita/brand/v3.0.0/",
+    "cdn": "https://cdn.jsdelivr.net/gh/chizpita/brand@v3.0.0/"
+  },
+  "rules": "Pick the asset by use case below. Full-color artwork is PNG (illustration plus vector type); one-color artwork and the wordmark are SVG. Never recolor, redraw or retype; regenerate with `make`. Full rules: BRAND.md.",
+  "use_cases": {
+    "website_header": {"file": "logo/horizontal/chizpita-horizontal-color.png", "on_dark": "logo/horizontal/chizpita-horizontal-color-reversed.png", "min_width_px": 160},
+    "website_hero": {"file": "logo/badge/chizpita-badge-color.png"},
+    "website_header_narrow": {"file": "logo/icon/chizpita-icon-color.png", "note": "under 360px viewport width or when the header is under 160px wide"},
+    "order_page_confirm_animation": {"file": "mascot/chizpita-mascot-celebrating.png", "note": "pop in with a small scale overshoot; the spark on the i can twinkle"},
+    "order_page_orders_closed": {"file": "mascot/chizpita-mascot-sleepy.png"},
+    "order_page_welcome": {"file": "mascot/chizpita-mascot-waving.png"},
+    "order_page_confirmed_small": {"file": "mascot/chizpita-mascot-thumbs-up.png"},
+    "favicon_ico": {"file": "exports/web/favicon.ico", "sizes": [16, 32, 48]},
+    "favicon_png_32": {"file": "exports/web/favicon-32.png"},
+    "apple_touch_icon": {"file": "exports/web/apple-touch-icon.png", "size": 180},
+    "pwa_icon_192": {"file": "exports/web/icon-192.png"},
+    "pwa_icon_512": {"file": "exports/web/icon-512.png"},
+    "pwa_icon_maskable": {"file": "exports/web/icon-maskable-512.png"},
+    "web_manifest": {"file": "exports/web/site.webmanifest"},
+    "og_image_link_preview": {"file": "exports/social/og-image-1200x630.png", "width": 1200, "height": 630},
+    "whatsapp_business_avatar": {"file": "exports/social/avatar-640.png", "size": 640, "note": "the mascot's face: reads at 40px in chat lists"},
+    "instagram_avatar": {"file": "exports/social/avatar-640.png", "size": 640},
+    "avatar_badge_alt": {"file": "exports/social/avatar-badge-640.png", "note": "full badge; text is too small below ~120px"},
+    "avatar_dark_alt": {"file": "exports/social/avatar-dark-640.png"},
+    "internal_app_icon": {"file": "logo/icon/chizpita-icon-color.png"},
+    "internal_app_header": {"file": "logo/horizontal/chizpita-horizontal-color.png"},
+    "flyer": {"file": "logo/badge/chizpita-badge-color.png", "note": "the badge brings its own cream ground, so it works on chalkboard flyers"},
+    "packaging_kraft_stamp": {"file": "logo/badge/chizpita-badge-mono-dark.svg", "alt": "logo/mark/chizpita-mark-mono-dark.svg", "min_print_diameter_mm": 38},
+    "sticker_round": {"file": "logo/badge/chizpita-badge-color.png", "min_print_diameter_mm": 50},
+    "box_lid_or_bag_color": {"file": "logo/stacked/chizpita-stacked-color.png"},
+    "box_lid_or_bag_one_color": {"file": "logo/stacked/chizpita-stacked-mono-dark.svg"},
+    "dark_background_any": {"file": "logo/horizontal/chizpita-horizontal-color-reversed.png", "one_color": "logo/horizontal/chizpita-horizontal-mono-light.svg"},
+    "embroidery_apron_or_cap": {"file": "logo/stacked/chizpita-stacked-mono-dark.svg", "on_dark_fabric": "logo/stacked/chizpita-stacked-mono-light.svg"},
+    "email_signature": {"file": "exports/logo/horizontal/chizpita-horizontal-color-256@2x.png", "display_width_px": 256},
+    "wordmark_only": {"file": "logo/wordmark/chizpita-wordmark-color.svg", "note": "when the pita or the mascot is already nearby"},
+    "mascot_canonical": {"file": "mascot/chizpita-mascot-front.png"},
+    "mascot_small_avatar_or_reaction": {"file": "mascot/chizpita-mascot-head.png"}
+  },
+  "masters": {
+    "full_color": "PNG, 2x the layout grid: logo/badge, logo/horizontal, logo/stacked, logo/mark, logo/icon, mascot/",
+    "vector": "SVG: logo/wordmark (all variants) and every one-color version (mono-dark, mono-light)",
+    "variants": {
+      "color": "full color, for light grounds (paper, cream, white)",
+      "color-reversed": "full color with a cream wordmark, for dark grounds",
+      "mono-dark": "one color roast #2A1A0F: stamps, kraft, embroidery, gold grounds",
+      "mono-light": "one color cream #FFF3DC: dark grounds, dark fabric"
+    },
+    "illustration_sources": "art/source/ (see art/README.md)",
+    "mascot_poses": ["front", "waving", "thumbs-up", "celebrating", "sleepy", "head"]
+  },
+  "tokens": {"json": "tokens/tokens.json", "css": "tokens/brand.css"},
+  "colors": {
+    "roast": "#2A1A0F", "spark-gold": "#F2A230", "cheese": "#F2B53A", "crust": "#E3913A",
+    "cream": "#FFF3DC", "paper": "#FFFCF6", "olive": "#4E6B2C"
+  },
+  "fonts": {"display": "Titan One (OFL)", "text": "Figtree (OFL)"}
+}
