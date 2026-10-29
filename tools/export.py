@@ -50,6 +50,25 @@ def save(img, rel, flatten=None):
     img.save(path, optimize=True)
 
 
+def form_header():
+    """Google Form header, 1600x400 (Forms crops to 4:1): horizontal logo + waving mascot on cream."""
+    W, H = 1600, 400
+    bg = Image.new('RGBA', (W, H), CREAM)
+    logo = Image.open(os.path.join(ROOT, 'logo', 'horizontal', 'chizpita-horizontal-color.png')).convert('RGBA')
+    logo = logo.crop(logo.getbbox())
+    lw = 860
+    logo = logo.resize((lw, round(logo.height * lw / logo.width)), Image.LANCZOS)
+    m = Image.open(os.path.join(ROOT, 'mascot', 'chizpita-mascot-waving.png')).convert('RGBA')
+    m = m.crop(m.getbbox())
+    mh = 320
+    m = m.resize((round(m.width * mh / m.height), mh), Image.LANCZOS)
+    gap = 70
+    x0 = (W - (lw + gap + m.width)) // 2
+    bg.alpha_composite(logo, (x0, (H - logo.height) // 2))
+    bg.alpha_composite(m, (x0 + lw + gap, (H - mh) // 2))
+    save(bg, 'social/form-header-1600x400.png', flatten=CREAM)
+
+
 def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
@@ -101,6 +120,7 @@ def main():
     og = os.path.join(ROOT, 'social', 'chizpita-og-image.png')
     save(load(og, 1200), 'social/og-image-1200x630.png', flatten=CREAM)
     save(load(og, 2400), 'social/og-image-1200x630@2x.png', flatten=CREAM)
+    form_header()
     print(f'exported {n} logo/mascot PNGs + web, PWA and social files to exports/')
 
 

@@ -37,6 +37,7 @@
     "internal_app_icon": {"file": "logo/icon/chizpita-icon-color.png"},
     "internal_app_header": {"file": "logo/horizontal/chizpita-horizontal-color.png"},
     "flyer": {"file": "logo/badge/chizpita-badge-color.png", "note": "the badge brings its own cream ground, so it works on chalkboard flyers"},
+    "google_form_header": {"file": "exports/social/form-header-1600x400.png", "width": 1600, "height": 400, "note": "Google Form theme header (Forms crops to 4:1); form theme color #8C4F0A, fonts Titan One (header) and Figtree (questions, text)"},
     "packaging_kraft_stamp": {"file": "logo/badge/chizpita-badge-mono-dark.svg", "alt": "logo/mark/chizpita-mark-mono-dark.svg", "min_print_diameter_mm": 38},
     "sticker_round": {"file": "logo/badge/chizpita-badge-color.png", "min_print_diameter_mm": 50},
     "box_lid_or_bag_color": {"file": "logo/stacked/chizpita-stacked-color.png"},
